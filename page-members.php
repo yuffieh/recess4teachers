@@ -26,15 +26,15 @@ if (is_front_page()) {
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <div class="member-row">
-                <span class="member-image">
-                    <img src="<?php the_post_thumbnail_url('full'); ?>"/>
-                </span>
+        <span class="member-image">
+          <img src="<?php the_post_thumbnail_url('full'); ?>"/>
+        </span>
         <span class="member-bio">
-                    <h2 class="member-name"><?php the_title(); ?></h2>
-                    <hr>
-                    <br/>
+          <h2 class="member-name"><?php the_title(); ?></h2>
+          <hr>
+          <br/>
           <?php the_content(); ?>
-                </span>
+        </span>
       </div>
     <?php endwhile; ?>
   <?php endif; ?>
